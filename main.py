@@ -20,8 +20,8 @@ def main():
         print('Example: python main.py "How do I build a calculator app?"')
         sys.exit(1)
 
-    api_key = os.environ.get("GEMINI_API_KEY")
-    client = genai.Client(api_key=api_key)
+    my_api_key = os.environ.get("GEMINI_API_KEY")
+    client = genai.Client(api_key=my_api_key)
 
     user_prompt = " ".join(args)
 
@@ -43,8 +43,7 @@ def generate_content(client, messages, verbose):
     if verbose:
         print("Prompt tokens:", response.usage_metadata.prompt_token_count)
         print("Response tokens:", response.usage_metadata.candidates_token_count)
-    print("Response:")
-    print(response.text)
+    print("Response:", response.text)
 
 
 if __name__ == "__main__":
