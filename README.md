@@ -77,38 +77,40 @@ The agent has access to four core functions:
 
 ### 1. `get_files_info`
 Lists files and directories with their sizes.
-```python
-# Example: "Show me all files in the src directory"
-```
+
+Example: "Show me all files in the src directory"
+
 ### 2. `get_file_content`
 Reads and returns file content (up to 10,000 characters by default).
-python
-# Example: "Read the main.py file"
+
+Example: "Read the main.py file"
 
 ### 3. `run_python_file`
 Executes Python files and captures stdout/stderr.
-python
-# Example: "Run calculator.py with arguments 5 and 3"
+
+Example: "Run calculator.py with arguments 5 and 3"
 
 ### 4. `write_file`
 Creates or overwrites files with new content.
-python
-# Example: "Fix the bug in utils.py"
+
+Example: "Fix the bug in utils.py"
 
 ## Project Structure
 
+### Core Files
+- `main.py` - Entry point and main loop
+- `call_function.py` - Function dispatcher
+- `config.py` - Configuration (MAX_ITERS, MAX_CHARS)
+- `prompts.py` - System prompt for the agent
 
-.
-├── main.py                  # Entry point and main loop
-├── call_function.py         # Function dispatcher
-├── config.py                # Configuration (MAX_ITERS, MAX_CHARS)
-├── prompts.py               # System prompt for the agent
-├── functions/
-│   ├── get_file_content.py  # File reading function
-│   ├── get_files_info.py    # Directory listing function
-│   ├── run_python_file.py   # Python execution function
-│   └── write_file.py        # File writing function
-└── .env                     # API key (not committed)
+### Functions
+- `functions/get_file_content.py` - File reading
+- `functions/get_files_info.py` - Directory listing
+- `functions/run_python_file.py` - Python execution
+- `functions/write_file.py` - File writing
+
+### API
+- `.env` - API key (not committed to git)
 
 ## Configuration
 
