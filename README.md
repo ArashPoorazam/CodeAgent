@@ -1,6 +1,5 @@
 Here's a professional README for the CodeAgent project:
 
-```markdown
 # CodeAgent
 
 An AI-powered code assistant that uses Google's Gemini API to help developers analyze, debug, and modify code through natural language commands.
