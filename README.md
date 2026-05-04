@@ -32,54 +32,54 @@ CodeAgent is a command-line tool that leverages function calling capabilities of
 ```bash
 git clone github.com/ArashPoorazam/CodeAgent
 cd CodeAgent
-
+```
 2. Install dependencies:
-bash
+```bash
 pip install google-genai python-dotenv
-
+```
 3. Create a `.env` file in the project root:
-bash
+```bash
 GEMINI_API_KEY=your_api_key_here
-
+```
 Get your API key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 
 ## Usage
 
 Basic usage:
-bash
+```bash
 python main.py "your prompt here"
-
+```
 With verbose output:
-bash
+```bash
 python main.py "your prompt here" --verbose
-
+```
 ### Example Commands
 
 Analyze code:
-bash
+```bash
 python main.py "What does the calculator.py file do?"
-
+```
 Debug issues:
-bash
+```bash
 python main.py "Why is my calculator returning wrong results?"
-
+```
 Modify code:
-bash
+```bash
 python main.py "Add error handling to the divide function"
-
+```
 Run tests:
-bash
+```bash
 python main.py "Run the test file and tell me what failed"
-
+```
 ## Available Functions
 
 The agent has access to four core functions:
 
 ### 1. `get_files_info`
 Lists files and directories with their sizes.
-python
+```python
 # Example: "Show me all files in the src directory"
-
+```
 ### 2. `get_file_content`
 Reads and returns file content (up to 10,000 characters by default).
 python
